@@ -31,7 +31,7 @@
 </head>
 <body>
 	<a href="/"><button class="button button-small button-close"><span class="icon icon-clear"></span></button></a>
-	<form action="/doodle" method="POST"><button type="submit" class="button button-small button-gray"><span class="icon icon-skip"></span></button></form>
+	<form action="/doodle" method="post"><button type="submit" class="button button-small button-gray"><span class="icon icon-skip"></span></button></form>
 	<h2 class="hand">What is this supposed to be?</h2>
 	<div id="doodle" data="{{ doodle['drawing']}}"></div>
 	<form method="post" action="/reveal/{{ doodle['key_id'] }}">
