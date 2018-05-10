@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Misfire!</title>
+	<meta name="description" content="Guess what the A.I. couldn't. Drawings by real doodlers who tried to Quick, Draw! with Google.">
+	<meta name="robots" content="index, follow">
+	<base href="/">
+
+	<!-- ███╗ - ███╗██╗███████╗███████╗██╗██████╗ ███████╗██╗ -->
+	<!-- ████╗ ████║██║██╔════╝██╔════╝██║██╔══██╗██╔════╝██║ -->
+	<!-- ██╔████╔██║██║███████╗█████╗- ██║██████╔╝█████╗ -██║ -->
+	<!-- ██║╚██╔╝██║██║╚════██║██╔══╝- ██║██╔══██╗██╔══╝ -╚═╝ -->
+	<!-- ██║ ╚═╝ ██║██║███████║██║ - - ██║██║ -██║███████╗██╗ -->
+	<!-- ╚═╝ - - ╚═╝╚═╝╚══════╝╚═╝ - - ╚═╝╚═╝ -╚═╝╚══════╝╚═╝ -->
+
+	<link rel="apple-touch-icon" sizes="180x180" href= "{{ url_for('static',filename='meta/icon/apple-touch-icon.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href= "{{ url_for('static',filename='meta/icon/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href= "{{ url_for('static',filename='meta/icon/favicon-16x16.png') }}">
+	<link rel="shortcut icon" href= "{{ url_for('static',filename='meta/icon/favicon.ico') }}">
+	<link rel="manifest" href= "{{ url_for('static',filename='meta/icon/site.webmanifest') }}">
+	<link rel="mask-icon" href= "{{ url_for('static',filename='meta/icon/safari-pinned-tab.svg') }}" color="#742500">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+	<script src="{{ url_for('static',filename='jquery-3.3.1.min.js') }}"></script>
+	<script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<h1 class="hand logo">Misfire!</h1>
+	<img src="{{ url_for('static',filename='image/hero.png') }}" alt="Flaming Finger Gun Doodle">
+	<h2 class="hand">What were these doodles supposed to be?<br> Are you smarter than Google's neural network?</h2>
+	<p>Guess what the A.I. couldn't. Drawings by real doodlers who tried to <a target="_blank" href="http://quickdraw.withgoogle.com/">Quick, Draw! with Google</a>.</p>
+	<form action="/doodle" method="POST">
+		<button type="submit" name="button" class="button button-large button-yellow"><span class="center">Start Guessing!</span></button>
+	</form>
+	<a target="_blank" href="http://quickdraw.withgoogle.com/data">
+		<img src="{{ url_for('static',filename='image/tag.png') }}" alt="This is a Human Intelligence Experiment | Made with some data from Google without their help, or permission, or copyright, or resources, please don't sue us">
+	</a>
+	<script src="{{ url_for('static',filename='hand.js') }}"></script>
+</body>
+</html>

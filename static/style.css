@@ -1,0 +1,261 @@
+@font-face {
+	font-family: Hand-1;
+	src: url("font/hand-1.otf") format("opentype"); }
+@font-face {
+	font-family: Hand-2;
+	src: url("font/hand-2.otf") format("opentype"); }
+@font-face {
+	font-family: Hand-3;
+	src: url("font/hand-3.otf") format("opentype"); }
+.hand span {
+	position: relative;
+	bottom: -.2em;
+	font-weight: normal;
+	font-size: 1.4em; }
+	.font-1 {
+		font-family: Hand-1; }
+	.font-2 {
+		font-family: Hand-2; }
+	.font-3 {
+		font-family: Hand-3; }
+body {
+	margin: 0;
+	padding: 1em;
+	text-align: center;
+	font-family: "Roboto Mono", monospace; }
+	.yellow {
+		background: #ffd139; }
+h1, h2, h3, h4 {
+	margin: 1rem auto;
+	text-align: center;
+	font-weight: normal; }
+	h1 {
+		margin-top: 2rem; }
+	h1.logo {
+		text-transform: uppercase;
+		letter-spacing: .2em; }
+p {
+	margin: 1rem auto 2rem;
+	max-width: 22em;
+	line-height: 1.4em; }
+a {
+	color: #ffd139; }
+	a:hover {
+		color: #e2b537; }
+input#guess {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	margin: 2rem auto .25rem;
+	border: none;
+	border-bottom: 3px solid transparent;
+	padding: 0;
+	width: 6em;
+	max-width: 100%;
+	text-align: center;
+	font-size: 4em;
+	background: white; }
+	input#guess:focus {
+		outline: none; }
+button {
+	margin: 1rem auto 2rem;
+	border: 0;
+	background: none; }
+	button:focus {
+		outline: none; }
+.button {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 3px 18px 6px;
+	height: 50px;
+	width: 47px;
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Chrome/Safari/Opera */
+	-khtml-user-select: none;
+	/* Konqueror */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently
+	not supported by any browser */
+	background-repeat: no-repeat;
+	background-size: 94px 339px;
+	background-position: 0 0;
+	color: white;
+	text-align: center;
+	font-weight: normal;
+	font-size: 18px;
+	font-family: 'Roboto Mono', sans-serif;
+	cursor: pointer;
+	overflow: hidden;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-tap-highlight-color: transparent; }
+	.button.button-small {
+		background-image: url("http://quickdraw.withgoogle.com/static/svg/buttons_small.svg"); }
+		.button.button-small.button-close {
+			background-position: 0 -56px; }
+			.button.button-small.button-close:active {
+				background-position: -53px -56px; }
+		.button.button-small.button-pink {
+			background-position: 0 0; }
+			.button.button-small.button-pink:active {
+				background-position: -53px 0; }
+		.button.button-small.button-gray {
+			background-position: 0 -280px; }
+			.button.button-small.button-gray:active {
+				background-position: -53px -280px; }
+		.button.button-small.button-facebook {
+			background-position: 0 -168px; }
+			.button.button-small.button-facebook:active {
+				background-position: -53px -168px; }
+		.button.button-small.button-twitter {
+			background-position: 0 -112px; }
+			.button.button-small.button-twitter:active {
+				background-position: -53px -112px; }
+		.button.button-small.button-g {
+			background-position: 0 -224px; }
+			.button.button-small.button-g:active {
+				background-position: -53px -224px; }
+	.button.button-medium {
+		background-image: url("http://quickdraw.withgoogle.com/static/svg/buttons_medium.svg"); }
+		.button.button-medium.button-gray {
+			background-position: 0 0; }
+			.button.button-medium.button-gray:active {
+				background-position: -200px 0; }
+	.button.button-large {
+		background-image: url("http://quickdraw.withgoogle.com/static/svg/buttons_large.svg"); }
+		.button.button-large.button-green {
+			background-position: 0 0; }
+			.button.button-large.button-green:active {
+				background-position: -200px 0; }
+		.button.button-large.button-yellow {
+			background-position: 0 -71px; }
+			.button.button-large.button-yellow:active {
+				background-position: -200px -71px; }
+	.button:active {
+		padding-left: 3px;
+		padding-right: 9px; }
+		.button:active span {
+			position: relative;
+			top: 9px; }
+	.button.button-medium {
+		height: 58px;
+		width: 118px;
+		background-size: 400px 142px;
+		padding-top: 0;
+		padding-left: 9px;
+		padding-right: 8px; }
+		.button.button-medium:active {
+			padding-right: 12px; }
+			.button.button-medium:active span {
+				position: relative;
+				top: 8px; }
+	.button.button-large {
+		height: 58px;
+		width: 200px;
+		background-size: 400px 142px;
+		padding-top: 0;
+		padding-left: 9px;
+		padding-right: 8px; }
+		.button.button-large:active {
+			padding-left: 3px; }
+			.button.button-large:active span {
+				position: relative;
+				top: 8px; }
+	.button.button-drawing {
+		background-image: url("http://quickdraw.withgoogle.com/static/svg/buttons_drawing.svg");
+		height: 140px;
+		width: 198px;
+		background-position: 0 0;
+		background-size: 400px 142px;
+		padding-top: 0px;
+		padding-left: 14px;
+		padding-right: 8px; }
+		.button.button-drawing:active {
+			background-position: -200px 0;
+			padding-right: 12px;
+			padding-left: 10px;
+			padding-top: 8px; }
+	.button .icon {
+		display: inline-block;
+		margin-left: 1px;
+		margin-top: -3px;
+		margin-right: 5px;
+		width: 31px;
+		height: 26px;
+		background-repeat: no-repeat;
+		background-size: 170px 26px;
+		background-image: url("http://quickdraw.withgoogle.com/static/svg/icons.svg"); }
+		.button .icon.icon-undo {
+			background-position: 2px 0; }
+		.button .icon.icon-clear {
+			background-position: -54px 0; }
+		.button .icon.icon-skip {
+			background-position: -26px 0; }
+		.button .icon.icon-back {
+			background-position: -86px 1px; }
+	.button.button-medium span, .button.button-large span {
+		float: left; }
+		.button.button-medium span.center, .button.button-large span.center {
+			float: initial; }
+	.button .tooltip {
+		position: absolute;
+		color: black;
+		text-align: left;
+		font-size: 35px; }
+		.button#button-undo .tooltip {
+			top: -56px;
+			left: -90px; }
+			.button#button-undo .tooltip .arrow-2 {
+				left: 47px;
+				top: 15px; }
+		.button#button-clear .tooltip {
+			top: -87px;
+			left: -36px; }
+			.button#button-clear .tooltip .arrow-3 {
+				left: 31px;
+				top: 25px; }
+		.button#button-skip .tooltip {
+			top: -93px;
+			left: 42px; }
+			.button#button-skip .tooltip .arrow-4 {
+				left: 10px;
+				top: 35px; }
+		.button.button-close .tooltip {
+			top: 85px;
+			left: -26px; }
+			.button.button-close .tooltip .arrow-1 {
+				left: 5px;
+				top: -40px; }
+img {
+	margin: 1rem auto 2rem;
+	height: 6em;
+	display: block;
+	max-width: 100%; }
+	img.line {
+		margin: 1rem auto;
+		height: 3em;
+		max-width: 48em; }
+#doodle {
+	position: relative;
+	margin: 1rem auto 2rem;
+	width: 18em;
+	height: 18em;
+	max-width: 100%; }
+	#doodle.reveal {
+		width: 9em;
+		height: 9em; }
+		#doodle.reveal svg {
+			stroke-width: 6px; }
+	#doodle svg {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: visible; }
