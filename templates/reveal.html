@@ -38,8 +38,8 @@
 		<button type="submit" name="submit" class="button button-large button-green"><span class="center">Keep guessing!</span></button>
 	</form>
 	<div id="doodle" class="reveal" data="{{ doodle['drawing'] }}"></div>
-	<img class="line" src="https://quickdraw.withgoogle.com/static/svg/line.svg" alt="Line">
 	<h4>This drawing is from {{ doodle['country'] }}</h4>
+	<img class="line" src="https://quickdraw.withgoogle.com/static/svg/line.svg" alt="Line">
 	{% if ('human_guesses' in doodle): %}
 		<section>
 		{% if (len(doodle['human_guesses']) == 2): %}
