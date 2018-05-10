@@ -49,6 +49,8 @@ a {
 	color: #ffd139; }
 	a:hover {
 		color: #e2b537; }
+form {
+	display: inline; }
 input#guess {
 	display: block;
 	position: relative;
