@@ -24,22 +24,22 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
 	<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
 	<script src="{{ url_for('static',filename='jquery-3.3.1.min.js') }}"></script>
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
-	<main>
-		<a href="/"><button class="button button-small button-close"><span class="icon icon-clear"></span></button></a>
-		<h1 class="hand">{{ head1 }}</h1>
-		<h2 class="hand">The word was {{ doodle['word'] }}</h2>
-		<h3 class="hand">{{ head3 }}</h3>
-		<form action="/doodle" method="POST">
-			<button type="submit" name="submit" class="button button-large button-green"><span class="center">Keep guessing!</span></button>
-		</form>
-		<div id="doodle" class="reveal" data="{{ doodle['drawing'] }}"></div>
-		<img class="line" src="https://quickdraw.withgoogle.com/static/svg/line.svg" alt="Line">
-	</main>
+	<a href="/"><button class="button button-small button-close"><span class="icon icon-clear"></span></button></a>
+	<h1 class="hand">{{ head1 }}</h1>
+	<h2 class="hand">The word was {{ doodle['word'] }}</h2>
+	<h3 class="hand">{{ head3 }}</h3>
+	<form action="/doodle" method="POST">
+		<button type="submit" name="submit" class="button button-large button-green"><span class="center">Keep guessing!</span></button>
+	</form>
+	<div id="doodle" class="reveal" data="{{ doodle['drawing'] }}"></div>
+	<img class="line" src="https://quickdraw.withgoogle.com/static/svg/line.svg" alt="Line">
+	<h4>This drawing is from {{ doodle['country'] }}</h4>
 	{% if ('human_guesses' in doodle): %}
 		<section>
 		{% if (len(doodle['human_guesses']) == 2): %}
@@ -54,7 +54,6 @@
 		{% endif %}
 		</section>
 	{% endif %}
-	<h4>This drawing is from {{ doodle['country'] }}</h4>
 	<script src="{{url_for('static', filename='hand.js')}}"></script>
 	<script src="{{url_for('static', filename='doodle.js')}}"></script>
 </body>
