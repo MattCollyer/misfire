@@ -1,0 +1,20 @@
+web:
+    container_name: "misfire"
+    build: .
+    command: python3 -u app.py
+    ports:
+        - "80:80"
+    volumes:
+        - .:/misfire
+    links:
+        - mongodb
+mongodb:
+    image: mongo:latest
+    container_name: "mongodb"
+    ports:
+    - "27017:27017"
+mongo-data:
+    build: ./mongo-data
+    container_name: "mongodb_data"
+    links:
+        - mongodb
