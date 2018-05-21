@@ -34,8 +34,8 @@
 	<h1 class="hand">{{ head1 }}</h1>
 	<h2 class="hand">The word was {{ doodle['word'] }}</h2>
 	<h3 class="hand">{{ head3 }}</h3>
-	<form action="/doodle" method="POST">
-		<button type="submit" name="submit" class="button button-large button-green"><span class="center">Keep guessing!</span></button>
+	<form id="again" action="/doodle" method="POST">
+		<button type="submit" name="again" class="button button-large button-green"><span class="center">Keep guessing!</span></button>
 	</form>
 	<div id="doodle" class="reveal" data="{{ doodle['drawing'] }}"></div>
 	<h4>This drawing is from {{ doodle['country'] }}</h4>
@@ -54,6 +54,7 @@
 		{% endif %}
 		</section>
 	{% endif %}
+	<script src="{{url_for('static', filename='enter.js')}}"></script>
 	<script src="{{url_for('static', filename='hand.js')}}"></script>
 	<script src="{{url_for('static', filename='doodle.js')}}"></script>
 </body>
