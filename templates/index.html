@@ -33,13 +33,14 @@
 	<h1 class="hand logo">Misfire!</h1>
 	<img src="{{ url_for('static',filename='image/hero.png') }}" alt="Flaming Finger Gun Doodle">
 	<h2 class="hand">What were these doodles supposed to be?<br> Are you smarter than Google's neural network?</h2>
-	<p>Guess what the A.I. couldn't. Drawings by real doodlers who tried to <a target="_blank" href="http://quickdraw.withgoogle.com/">Quick, Draw! with Google</a>.</p>
+	<p>Guess what the A.I. couldn't. Drawings by real doodlers who tried to <a target="_blank" href="http://quickdraw.withgoogle.com/">Quick, Draw! with Google</a></p>
 	<form action="/doodle" method="post">
 		<button type="submit" name="button" class="button button-large button-yellow"><span class="center">Start Guessing!</span></button>
 	</form>
 	<a target="_blank" href="http://quickdraw.withgoogle.com/data">
 		<img src="{{ url_for('static',filename='image/tag.png') }}" alt="This is a Human Intelligence Experiment | Made with some data from Google without their help, or permission, or copyright, or resources, please don't sue us">
 	</a>
+	<p>a fun project by Matthew Collyer, with special thanks to Julian Lambert</p>
 	<script src="{{ url_for('static',filename='hand.js') }}"></script>
 </body>
 </html>
