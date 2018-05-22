@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-
-    Author: Matthew Collyer (matthewcollyer@bennington.edu)
-    Date: May 2 2018
+	Author: Matthew Collyer (matthewcollyer@bennington.edu)
+	Date: May 2 2018
 """
 from flask import Flask, render_template, request
 from pymongo import MongoClient
@@ -46,8 +45,8 @@ def get_doodle(key_id=None):
 	Returns a random doodle object from mongoDB.
 	"""
 	try:
-		client = MongoClient('localhost')
-		# client = MongoClient('mongodb',27017) # get our client
+		# client = MongoClient('localhost')
+		client = MongoClient('mongodb',27017) # get our client
 		db = client.quickdraw # get our database
 		if(key_id==None): #if random
 			total=db.qd.count()
@@ -66,8 +65,8 @@ def update_table(key_id,guess,correct):
 	if right: adds +1 for right guesses
 	"""
 	try:
-		client =MongoClient('localhost')
-		#client = MongoClient('mongodb',27017) # get our client
+		#client =MongoClient('localhost')
+		client = MongoClient('mongodb',27017) # get our client
 		db = client.quickdraw # get our database
 		if(correct==False):
 			db.qd.update_one({'key_id':key_id},{'$push': {'human_guesses': guess}})
@@ -76,6 +75,5 @@ def update_table(key_id,guess,correct):
 	except Exception as e:
 		print("Unable to connect to database: {0}".format(e))
 
-
 if __name__ == "__main__":
-	app.run(debug=True,host='0.0.0.0')
+	app.run(host='0.0.0.0',port=80)
