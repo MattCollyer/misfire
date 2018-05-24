@@ -28,6 +28,7 @@ def doodle_lookup():
 @app.route('/reveal/<key_id>',methods=['POST'])
 def reveal(key_id):
 	guess=request.form['guess']
+	guess=guess.strip()
 	correct=True
 	doodle=get_doodle(int(key_id))
 	if(guess.lower()!=doodle['word'].lower()):
@@ -69,7 +70,8 @@ def update_table(key_id,guess,correct):
 		client = MongoClient('mongodb',27017) # get our client
 		db = client.quickdraw # get our database
 		if(correct==False):
-			db.qd.update_one({'key_id':key_id},{'$push': {'human_guesses': guess}})
+			if(guess!=""):
+				db.qd.update_one({'key_id':key_id},{'$push': {'human_guesses': guess}})
 		else:
 			db.qd.update_one({'key_id':key_id},{'$inc':{'recognized_by_human': 1}})
 	except Exception as e:
