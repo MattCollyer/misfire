@@ -19,3 +19,9 @@ var guess = $("#guess");
 if (guess[0] != null) {
 	guess.addClass("font-"+Math.ceil(3 * Math.random()));
 }
+$("#guess-form").submit(function (e) {
+	if ($.trim($("#guess").value) == "") {
+		e.preventDefault();
+		$("#skip").submit();
+	}
+})
