@@ -70,7 +70,7 @@ def update_table(key_id,guess,correct):
 		db = client.quickdraw # get our database
 		if(correct==False):
 			db.qd.update_one({'key_id':key_id},{'$push': {'human_guesses': guess}})
-		else:
+		else if not guess:
 			db.qd.update_one({'key_id':key_id},{'$inc':{'recognized_by_human': 1}})
 	except Exception as e:
 		print("Unable to connect to database: {0}".format(e))
